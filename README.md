@@ -11,6 +11,14 @@ First, include detect-adblocker.js, preferably late and preferably minimized in 
 
     <script src="./detect-adblocker.js"></script>
 
+Find your container for the ads, usually a DIV with the advertising JavaScript snippet. Something like this:
+
+    <div id="myGoodAds">
+        <script>
+            /// HERE-IS-YOUR-ADVERTISING-CODE
+        </script>
+    </div>
+
 Then call the global scope function detectAdBlocker, passing a container node (usually DIV) or just its ID, the number of child elements in that container, without the advertising injected code (usually 1 (one), because that is the one script triggering the advertising) and at least one callback function for the case of detected ad blocker.
 
     // ad blocker callback
