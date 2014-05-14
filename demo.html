@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script src="detect-adblocker.js"></script>
+</head>
+<body>
+This is some begining text (before the advertising).
+<div class="banane">
+    <div class="medium-rectangle-detail" name="slot_210452" id="mediumRectangle">
+        <script language="JavaScript" src="http://ad-emea.doubleclick.net/adj/AS24_DE/UsedCars_Detailpage;make=47;model=1869;price=8;fr=11;miles=2;art=2;ad=dealer;zip=D04720;zip2=04720;did=8710519;seg=de_oem;seg=mass_oem;seg=sport;seg=new_fr;seg=low_miles;seg=high_price;seg=high_hp;hp=9;acc=U;vat=1;fuel=B;gear=A;carno=9585;carby=0;ECO=YES;equi=1;equi=4;equi=5;equi=6;equi=12;equi=15;equi=23;equi=26;equi=30;equi=31;equi=34;equi=38;equi=39;equi=40;equi=41;equi=42;type=D;cost=115900;img=http://pic2.autoscout24.net/images/097/027/0216027097001.jpg;stmak=Mercedes-Benz;stmod=SL 500;sthp=435;stkw=320;age=16;styea=2012;stmon=6;stmil=8475;stccm=4663;eutax=0;width=2;w=A10053;w=A10001;w=A10002;w=A10015;w=A10018;w=A10021;w=A10024;w=A10029;w=U11628;w=U11561;w=U11566;w=U11631;w=U11534;w=A10033;w=U11497;w=A10044;w=A10048;w=A10049;w=U12660;w=U12666;w=A10061;w=A10063;w=A0;test=off;rnd=18;;tile=6;sz=300x250,306x250;ord=2350794884?" type="text/javascript"></script>
+    </div>
+</div>
+This is the final text (after the advertising).
+<script>
+    (function(a, d, b, l, o, c, k, e, r){
+        if (!d){ // older browsers without console
+            d = {log:  function(){}};
+            d.warn = d.error = d.log;
+        }
+
+        c = 'Ad blocker detected';
+        // ad blocker callback
+        k = function(){
+            d.warn(c);
+            a.getElementById(l)
+                    .parentNode
+                    .appendChild(document.createTextNode(c));
+        }
+
+        // error callback
+        e = function(message){
+            d.error(message);
+        }
+
+        // ads running fine callback
+        r = function(){
+            d.log('Ads running fine');
+        }
+
+        b(l, o, k, e, r);
+    })(document, console, detectAdBlocker, 'mediumRectangle', 1);
+</script>
+</body>
+</html>
