@@ -1,5 +1,5 @@
 /**
- * Created by fzorca on 14.05.14.
+ * Copyright (c) 2014 Florentin Zorca.
  */
 
 var detectAdBlocker = function (container, elementsWithoutAds, adBlockerCallback, errorCallback, noAdBlockerCallback){
@@ -21,4 +21,4 @@ var detectAdBlocker = function (container, elementsWithoutAds, adBlockerCallback
 
     if(containerNode.childElementCount <= elementsWithoutAds) callBack(adBlockerCallback, null);
     else callBack(noAdBlockerCallback, null);
-}
+};

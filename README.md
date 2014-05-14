@@ -29,3 +29,8 @@ Then call the global scope function detectAdBlocker, passing a container node (u
                     });
 
 See the demo.html for a working example with a real doubleclick tag. You should use your own tags on your site though :).
+
+
+# License
+
+MIT, basically almost free to do what you want with it.
